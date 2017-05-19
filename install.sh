@@ -1,8 +1,11 @@
 #!/bin/bash
 
-sudo yum -y install make automake gcc gcc-c++ tmux emacs python-pip bison libtool git cmake libmad-devel libsndfile-devel gd-devel boost-devel intltool libtool-ltdl-devel swig
+sudo yum -y install make automake gcc gcc-c++ tmux emacs bison libtool git cmake libmad-devel libsndfile-devel gd-devel boost-devel intltool libtool-ltdl-devel swig
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+mv json-c libsndfile-1.028 pulseaudio-10.0 sphinxbase-5prealpha pocketsphinx ~
+cd ~
 
 cd json-c
 sudo make install
