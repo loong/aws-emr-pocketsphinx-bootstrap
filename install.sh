@@ -4,7 +4,7 @@ sudo yum -y install make automake gcc gcc-c++ tmux emacs bison libtool git cmake
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
-mv json-c libsndfile-1.028 pulseaudio-10.0 sphinxbase-5prealpha pocketsphinx ~
+cp -r json-c libsndfile-1.0.28 pulseaudio-10.0 sphinxbase-5prealpha pocketsphinx ~
 cd ~
 
 cd json-c
