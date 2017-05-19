@@ -8,7 +8,7 @@ cd json-c
 sudo make install
 cd ..
 
-cd libsndfile
+cd libsndfile-1.0.28
 sudo make install
 cd ..
 
