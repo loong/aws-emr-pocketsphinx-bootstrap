@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo yum -y install make automake gcc gcc-c++ tmux emacs python-pip
-sudo yum -y install git cmake libmad-devel libsndfile-devel gd-devel boost-devel intltool libtool-ltdl-devel swig
+sudo yum -y install make automake gcc gcc-c++ tmux emacs python-pip bison libtool git cmake libmad-devel libsndfile-devel gd-devel boost-devel intltool libtool-ltdl-devel swig
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
@@ -19,7 +18,13 @@ cd ..
 
 sudo ldconfig
 
-pip install --user pocketsphinx
+cd sphinxbase-5prealpha
+sudo make install
+cd ..
+
+cd pocketsphinx
+sudo make install
+cd ..
 
 echo "" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >> ~/.bashrc
